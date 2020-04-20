@@ -1,51 +1,50 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled, { createGlobalStyle } from 'styled-components';
+import { Nav } from "../components/Nav";
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+const GlobalStyle = createGlobalStyle`
+    *, 
+    *::before, 
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-  `)
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+    html,
+    body {
+        margin-top: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.1;
+
+        & + * {
+            margin-top: .5rem;
+        }
+    }
+`;
+
+const MainStyled = styled.main`
+    margin: 2rem 0 auto;
+`;
+
+export const Layout = (props) => {
+    return (
+        <>
+            <GlobalStyle />
+            <Nav />
+            <MainStyled>
+                {props.children}
+            </MainStyled>
+        </>
+    )
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 }
-
-export default Layout
