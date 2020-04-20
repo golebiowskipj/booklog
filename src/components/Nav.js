@@ -9,16 +9,20 @@ const NavStyled = styled.nav`
     padding: 1rem;
     display: flex;
     align-items: center;
-
-    border: 1px solid black;
+    border-bottom: 1px solid black;
 `;
 
 const LinkStyled = styled(Link)`
     text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    display: flex;
+    align-items:center;
+    letter-spacing: 1px;
 `;
 
-const ImageContainer = styled.div`
-    width: 1.5rem;
+const ImageStyled = styled(Image)`
+    width: 24px;
     margin-right: .33rem;
 `;
 
@@ -37,10 +41,10 @@ export const Nav = () => {
 
     return (
         <NavStyled>
-            <ImageContainer>
-                <Image fluid={image.sharp.fluid} />
-            </ImageContainer>
-            <LinkStyled to="/">Booklog</LinkStyled>
+            <LinkStyled to="/">
+                <ImageStyled fluid={image.sharp.fluid} />
+                <p>Booklog</p>
+            </LinkStyled>
         </NavStyled>
     );
 };

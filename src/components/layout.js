@@ -15,13 +15,15 @@ const GlobalStyle = createGlobalStyle`
     html,
     body {
         margin-top: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-family: 'Noto Sans', Arial, sans-serif;
+        font-weight: 400;
         font-size: 18px;
         line-height: 1.4;
     }
 
     h1, h2, h3, h4, h5, h6 {
         line-height: 1.1;
+        font-weight: 700;
 
         & + * {
             margin-top: .5rem;
@@ -30,7 +32,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const MainStyled = styled.main`
-    margin: 2rem 0 auto;
+    width: 90vw;
+    max-width: 767px;
+    margin: 0 auto;
 `;
 
 export const Layout = (props) => {
