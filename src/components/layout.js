@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
-import { Nav } from "../components/Nav";
+import { Nav } from "./Nav";
 
 const GlobalStyle = createGlobalStyle`
     *, 
