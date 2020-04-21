@@ -18,6 +18,6 @@ const HeaderStyled = styled.header`
 export const Hero = () => (
     <HeaderStyled>
         <h1>Booklog</h1>
-        <p>bo nie pamiętam co przeczytałem dzień po</p>
+        <p>bo nie pamiętam co przeczytałem dzień wcześniej</p>
     </HeaderStyled>
 );

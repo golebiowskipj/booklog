@@ -67,5 +67,6 @@ PostPreview.propTypes = {
     post: PropTypes.shape({
         title: PropTypes.string,
         slug: PropTypes.string,
+        image: PropTypes.any,
     })
 }

@@ -6,7 +6,6 @@ import styled from 'styled-components';
 const PostsListContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
 `;
 
 export const PostsList = () => {
