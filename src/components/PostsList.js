@@ -6,6 +6,11 @@ import styled from 'styled-components';
 const PostsListContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+
+    @media(min-width: 700px) {
+        justify-content: space-between;
+    }
 `;
 
 export const PostsList = () => {

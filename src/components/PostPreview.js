@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
+import { useImagePlaceholder } from '../hooks/useImagePlaceholder';
 
 const PostPreviewContainer = styled.article`
-    width: 30%;
+    width: 20%;
     min-width: 250px;
     margin: .5rem;
 
@@ -50,10 +51,16 @@ const ReadLink = styled(Link)`
 `;
 
 export const PostPreview = ({ post }) => {
+    const imagePlaceholder = useImagePlaceholder();
     return (
         <PostPreviewContainer>
             <ImageLink to={post.slug}>
-                <Image fluid={post.image.sharp.fluid} alt={post.title} />
+                {post.image
+                    ?
+                    <Image fluid={post.image.sharp.fluid} alt={post.title} />
+                    :
+                    <Image fluid={imagePlaceholder.sharp.fluid} alt="placeholder" />
+                }
             </ImageLink>
             <ReadLink to={post.slug}>
                 {post.title}

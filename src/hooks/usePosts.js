@@ -15,7 +15,10 @@ export const usePosts = () => {
             slug
             image {
               sharp: childImageSharp {
-                fluid  {
+                fluid (
+                  maxWidth: 250
+                  maxHeight: 250
+                  ) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
