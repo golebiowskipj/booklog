@@ -33,7 +33,6 @@ const GlobalStyle = createGlobalStyle`
 
 const MainStyled = styled.main`
     width: 90vw;
-    max-width: 767px;
     margin: 0 auto;
 `;
 

@@ -9,7 +9,6 @@ const NavStyled = styled.nav`
     padding: 1rem;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid black;
 `;
 
 const LinkStyled = styled(Link)`
