@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Nav } from "./Nav";
 
@@ -47,8 +46,4 @@ export const Layout = (props) => {
             </MainStyled>
         </>
     )
-}
-
-Layout.propTypes = {
-    children: PropTypes.node.isRequired,
 }
