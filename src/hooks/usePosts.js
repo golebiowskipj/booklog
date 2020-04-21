@@ -11,7 +11,7 @@ export const usePosts = () => {
         {
         nodes {
           frontmatter {
-            title
+            booktitle
             slug
             image {
               sharp: childImageSharp {
@@ -30,7 +30,7 @@ export const usePosts = () => {
 `);
 
   return data.allMdx.nodes.map(post => ({
-    title: post.frontmatter.title,
+    booktitle: post.frontmatter.booktitle,
     slug: post.frontmatter.slug,
     image: post.frontmatter.image
   }))

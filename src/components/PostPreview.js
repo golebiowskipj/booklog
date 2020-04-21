@@ -19,7 +19,7 @@ const ImageLink = styled(Link)`
     width: 100%;
 `;
 
-const ReadLink = styled(Link)`
+export const ReadLink = styled(Link)`
     text-align: center;
     margin-top: 1rem;
     padding-bottom: 5px;
@@ -57,13 +57,13 @@ export const PostPreview = ({ post }) => {
             <ImageLink to={post.slug}>
                 {post.image
                     ?
-                    <Image fluid={post.image.sharp.fluid} alt={post.title} />
+                    <Image fluid={post.image.sharp.fluid} alt={post.booktitle} />
                     :
                     <Image fluid={imagePlaceholder.sharp.fluid} alt="placeholder" />
                 }
             </ImageLink>
             <ReadLink to={post.slug}>
-                {post.title}
+                {post.booktitle}
             </ReadLink>
         </PostPreviewContainer>
     )
