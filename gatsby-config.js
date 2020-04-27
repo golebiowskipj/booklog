@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Booklog blog`,
+    title: `Booklog`,
     description: `This is a side project, which is a Gatsby + MDX blog where I keep track of some books that I read`,
     author: `Piotr Gołębiowski`,
     url: 'localhost:8000',
