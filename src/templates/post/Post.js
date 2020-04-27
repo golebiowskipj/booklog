@@ -42,6 +42,7 @@ const PostTitle = styled.h4`
     text-align: center;
     font-size: .9rem;
     font-weight: normal;
+    line-height: 1.3;
 `;
 
 const GoBackButton = styled(ReadLink)`
