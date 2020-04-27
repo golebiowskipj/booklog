@@ -9,7 +9,7 @@ const PostsListContainer = styled.section`
     justify-content: center;
 
     @media(min-width: 700px) {
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 `;
 
