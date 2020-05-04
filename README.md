@@ -1,6 +1,8 @@
 # Boolog
 
-A learning project. "Blog" written in Gatsby with MDX. 
+A learning project. "Blog" written in Gatsby with MDX.
+
+[Live](https://booklog.netlify.app/)
 
 ## Setup 
 * clone repository 
